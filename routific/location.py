@@ -17,6 +17,7 @@ class Location(object):
   def toDict(self):
     location = {}
 
+    if self.id:   location["id"] = self.id
     if self.name: location["name"] = self.name
     if self.lat:  location["lat"] = self.lat
     if self.lng:  location["lng"] = self.lng
