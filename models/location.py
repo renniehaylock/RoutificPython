@@ -3,5 +3,3 @@ class Location(object):
     self.name   = name
     self.lat    = lat
     self.lng    = lng
-
-
