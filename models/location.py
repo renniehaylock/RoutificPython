@@ -4,8 +4,9 @@ class Location(object):
   (Latitude)    lat
   (Longitude)   lng
   '''
-  def __init__(self,lat,lng,name=None):
+  def __init__(self,lat,lng,id=None,name=None):
     # TODO: Type Checking for lat and lon
+    self.id = id
     self.name   = name
     self.lat    = lat
     self.lng    = lng
