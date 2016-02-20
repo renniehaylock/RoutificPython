@@ -2,10 +2,11 @@ from location import Location
 import json
 
 class Vehicle(object):
-    def __init__(self, startId, startLat, startLng, endId, endLat, endLng, startName = None, endName = None, shiftStart = None, shiftEnd = None, capacity = None, speed = None, type = None, strictStart = None, minVisits = None, breakStart = None, breakEnd = None, breakDuration = None):
+
+    def __init__(self, startId, startLat, startLng, endId=None, endLat=None, endLng=None, startName = None, endName = None, shiftStart = None, shiftEnd = None, capacity = None, speed = None, type = None, strictStart = None, minVisits = None, breakStart = None, breakEnd = None, breakDuration = None):
         self.startLocation = Location(startLat, startLng, startId, startName)
-        if !endId and !endLat and !endLng:
-            self.endLocation = Location(endLat, endLng, endId, endName)
+        if endId and endLat and endLng:
+          self.endLocation = Location(endLat, endLng, endId, endName)
         self.shiftStart = shiftStart
         self.shiftEnd = shiftEnd
         self.capacity = capacity
